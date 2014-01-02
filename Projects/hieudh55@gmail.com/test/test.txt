@@ -1,0 +1,38 @@
+Feature: Login feature
+  As an android developer
+  I want to have a sample feature file
+  So I can begin testing quickly
+
+  Scenario: I can start my app and take main screen's picture # features\my_first.feature:6
+    Given I start my app                                      # features/step_definitions/calabash_steps.rb:12
+    Then I see main menu                                      # features/step_definitions/calabash_steps.rb:17
+    Then I take a nice picture of my main screen              # features/step_definitions/calabash_steps.rb:21
+
+  Scenario: I want to test random number array feature of my app # features\my_first.feature:11
+    Given I want to use Counting Sort feature                    # features/step_definitions/calabash_steps.rb:25
+    Then I enter number of digits i want to sort                 # features/step_definitions/calabash_steps.rb:31
+    Then I want to get a new random number array                 # features/step_definitions/calabash_steps.rb:36
+
+  Scenario: I want to test TimSort feature                           # features\my_first.feature:16
+    Given I want to use TimSort feature                              # features/step_definitions/calabash_steps.rb:44
+    Then I want use TimSort to sort 6 numbers                        # features/step_definitions/calabash_steps.rb:48
+      No element found for query: TextView marked:'Tim Sort is chosen' (RuntimeError)
+      ./features/step_definitions/calabash_steps.rb:50:in `/^I want use TimSort to sort 6 numbers$/'
+      features\my_first.feature:18:in `Then I want use TimSort to sort 6 numbers'
+    But I dont like this number array, so I chose a new number array # features/step_definitions/calabash_steps.rb:55
+    Then I see number array after timsort and sort steps             # features/step_definitions/calabash_steps.rb:60
+
+  Scenario: Test Merge Sort feature and scroll down              # features\my_first.feature:22
+    Given I want to use MergeSort feature                        # features/step_definitions/calabash_steps.rb:72
+    Then I want to use MergeSort to sort 9 numbers               # features/step_definitions/calabash_steps.rb:76
+    And I see random number array, I like it so I want to use it # features/step_definitions/calabash_steps.rb:83
+    Then I see number array after merge sort and sort steps      # features/step_definitions/calabash_steps.rb:66
+
+Failing Scenarios:
+cucumber features\my_first.feature:16 # Scenario: I want to test TimSort feature
+
+4 scenarios (1 failed, 3 passed)
+14 steps (1 failed, 2 skipped, 11 passed)
+1m59.880s
+No test server found for this combination of app and calabash version. Recreating test server.
+Done signing the test server. Moved it to test_servers/a8c2507e3f5aaaa71e8862676665e32b_0.4.11.apk
